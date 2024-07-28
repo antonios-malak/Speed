@@ -793,9 +793,22 @@
         align-items:center;
 
     }
+    @media (max-width:767px){
+        .skills .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .skills img {
+        max-width:100%;
+    }
     .skills .content{
         flex:1;
-
+    }
+    @media (max-width:767px){
+        .skills .content {
+            width:100%;
+        }
     }
     .skills .content .skill {
         margin:40px 0;
@@ -837,12 +850,14 @@
         display:flex;
         align-items: center;
     }
-
-    .how .content {
-    
+    @media (max-width:767px){
+        .how .container {
+            display: flex;
+            flex-direction: column;
+        }
 
     }
-    .how .content img {
+    .how .container img {
         max-width: 100%;
     }
     .how .content .box {
@@ -891,10 +906,213 @@
         margin-bottom: 0;
         color: #777;
         line-height: 1.5;
+    }
+    /* end how it works  */
+    /* start events  */
+    .events {
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+
+    }
+    .events .content {
+        display:flex;
+        align-items: center;
+    }
+    @media (max-width:767px){
+        .events .content{
+            display:flex;
+            flex-direction: column;
+        }
+    }
+    .events img{
+        max-width:100%;
+        width:400px ;
+
+    }
+    .events .info {
+        padding:20px 0;
+
+    }
+    .events .info .data {
+        display:flex;
+        justify-content: center
+        
+    }
+    .events .data .time {
+        display: flex;
+        flex-direction: column;
+        margin:0 10px;
+        border:1px solid #cecece;
+        border-radius: 7px;
+        transition: .3s;
+    }
+
+    .events .time .numbers {
+        font-size: 35px;
+        color: var(--main-color);
+        font-weight: bold;
+        width: 80px;
+        padding: 20px;    
+    }
+    .events .time span:last-of-type {
+        font-size:14px;
+        color:#777;
+        padding:8px 10px ;
+        text-align: center;
+        border-top:1px solid #cecece;
+        transition: .3s;
+    }
+    .events .data .time:hover{
+        border-color: var(--main-color);
+
+    }
+    .events .data .time:hover span:last-of-type {
+        border-color: var(--main-color);
+    }
+
+
+    .events .info h3 {
+        font-size: 30px ;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .events .info p{
+        font-size:19px;
+        line-height: 2 ;
+        color:#777;
+        text-align: center;
+
+    }
+    .events .container form {
+
+    }
+    .events .container form .subscribe{
+        display:block;
+        margin:80px auto 0 auto;
+        width:fit-content;
+        padding:30px;
+        background-color: #ececec;
+        border-radius:65px;
+    }
+    .events .subscribe input[type="email"]{
+        padding: 20px;
+        margin-right: 20px;
+        width:400px;
+        border-color:rgb(255, 255, 255);
+        border-radius:30px;
+        border-width: 0;
+
+    }
+    @media(max-width:767px){
+        .events .subscribe input[type="email"]{
+            width:200px;
+        }
+
+    }
+    .events .subscribe input[type="submit"]{
+        padding: 20PX;
+        color:white;
+        font-weight: bold;
+        background-color: var(--main-color);
+        border-color:var(--main-color);
+        border-radius: 30px;
+        border-width: 0;
+    }
+    /* end events  */
+    /* start plans  */
+    /* end plans  */
+    .plans{
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+        background-color: #ececec;
+
+    }
+    .plans .container {
+        display:grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        gap:30px;
+
+    }
+    .plans .container .box{
+        text-align: center;
+        background-color: white;
+        box-shadow:var(--box-shadow) ;
+        position: relative;
+    }
+    .plans .box img {
+        width:80px;
+    }
+    .plans .box h3{
+        font-size: 25px;
+    }
+    .plans .box .pricing{
+        margin-bottom:20px;
+        
+
+    }
+    .plans .box .pricing .price{
+        font-size: 60px;
+        font-weight: bold;
+        color:var(--main-color);
+        display:block;
+        margin-bottom: 5px;
+
+    }
+    .plans .box .pricing .period{
+        display:block;
+        color: #777;
+
+    }
+    .plans .box ul{
+        text-align: left;
+
+    }
+    .plans .box li {
+        padding:20px;
+        color: #777;
+        border-top:1px solid #e8e6e6;
 
 
     }
-    /* end how it works  */
+    .plans .box li i {
+        margin-right: 10px;
+        color: var(--main-color);
+    }
+    .plans .box a{
+        display:block;
+        padding:20px;
+        width:fit-content;
+        border:2px solid var(--main-color);
+        color:var(--main-color);
+        border-radius: 6px ;
+        margin:30px auto ;
+        font-weight: bold;
+    }
+    .plans .box.popular {
+        top:-20px;
+        
+
+    }
+    .plans .box.popular .label {
+        position:absolute;
+        writing-mode: vertical-lr;
+        padding:10px 10px 30px 10px ;
+        background-color: var(--main-color);
+        color:white;
+        font-weight: bold ;
+        top:0;
+        right:20px;
+        width:40px;
+    }
+    .plans .box.popular .label::before{
+        position: absolute;
+        content: "";
+        right:0;
+        bottom:0;
+        border:20px solid  ;
+        border-color: transparent transparent white transparent;
+        
+    }
     /* start animation  */
 
     @keyframes up-and-down {
