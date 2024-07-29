@@ -1005,7 +1005,7 @@
     }
     @media(max-width:767px){
         .events .subscribe input[type="email"]{
-            width:200px;
+            width:180px;
         }
 
     }
@@ -1020,7 +1020,7 @@
     }
     /* end events  */
     /* start plans  */
-    /* end plans  */
+    
     .plans{
         padding-top: var(--section-padding);
         padding-bottom: var(--section-padding);
@@ -1113,6 +1113,176 @@
         border-color: transparent transparent white transparent;
         
     }
+    /* end plans  */
+    /* start top videos  */
+    .videos{
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+
+    }
+    .videos .content{
+        display: flex;
+    }
+    @media(max-width:767px){
+        .videos .content{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .videos .list{
+    min-width: 300px;
+    border:1px solid #ececec ;
+
+    }
+    .videos .list .name {
+        background-color: #f4f4f4;
+        padding:20px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+
+    }
+
+    .videos .list li{
+        padding:20px;
+        font-size: 16px;
+        border:1px solid #ececec;
+        transition: .3s;
+    }
+    .videos .list li:hover {
+        color:var(--main-color);
+    }
+
+    .videos .list li span {
+        display:block;
+        margin-top:10px;
+        color:#777 !important ;
+
+    }
+    .videos .preview{
+        background-color: #e2e2e2;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    .videos .preview img{
+        max-width: 100%;
+
+    }
+    .videos .preview .info{
+        padding:20px;
+        font-size: 16px;
+        background-color: white;
+
+    }
+    /* end top videos  */
+    /* start discound  */
+    .discound {
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .discound .image {
+        background-image: url(../IMGS/discount-background1.jpg);
+        position: relative;
+        flex-basis:50%;
+        background-size: cover;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding:100px 20px ;
+        z-index:1;
+    }
+    @media (max-width:767px){
+        .discound .image{flex-basis: 100%;}
+    }
+    .discound .image::before{
+        position: absolute;
+        content: "";
+        background-color: var(--main-color);
+        left: 0;
+        top:0;
+        width:100%;
+        height: 100%;
+        z-index:-1;
+        opacity:97%;
+
+    }
+    .discound .image .content{
+        text-align: center;
+        padding:0 20px ;
+        
+    }
+
+    .discound .image .content h2 {
+        color:white;
+        font-size: 40px;
+
+    }
+    
+    .discound .image p {
+        color:white;
+        font-size: 18px;
+        line-height: 1.5;
+
+    }
+    .discound .image img {
+        width:300px;
+        height: 300px;
+    }
+    .discound .form {
+        display:flex;
+        align-items: center;
+        flex-basis: 50%;
+        padding-bottom: 50px;
+        justify-content: center;
+    }
+    @media (max-width:767px){
+        .discound .form {flex-basis: 100%;}
+    }
+    .discound .form .content {
+        text-align: center;
+
+
+    }
+    .discound .form .content h2 {
+        font-size: 40px;
+
+    }
+    .discound .form .content .input {
+       display: block;
+        width:100%;
+        background-color: #f9f9f9;
+        outline: none;
+        padding:20px;
+        border:none;
+        margin-bottom:20px;
+        border-bottom: 1px solid #cecece;
+    }
+    .discound .form .content .input:last-of-type{
+        height: 170px;
+    }
+    .discound .form input[type="submit"] {
+        display:block;
+        width:fit-content;
+        margin:0 auto ;
+        padding:10px 155px;
+        color:white;
+        background-color: var(--main-color);
+        border:none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .discound .form input[type="submit"]:hover{
+        background-color: var(--alt-color);
+        cursor: pointer;
+    }
+    /* ens discound  */
     /* start animation  */
 
     @keyframes up-and-down {
